@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Javascript</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="row ifListe"  style="margin-top: 15px">
+				<div class="col-6">
+					<label>Filtre : </label>
+					<input id="filtre" type="text">
+				</div>
+				<div class="col-6">
+					<label>Langue : </label>
+					<select id="select_langue">
+						<option value="en">Anglais</option>
+						<option value="fr">Français</option>
+					</select>
+				</div>
+			</div>
+			<div class="row ifListe" style="margin-top: 15px">
+				<table id="table_pays" class="table table-striped table-hover table-sm">
+					<thead class="thead-dark">
+						<th>Nom</th>
+						<th>Capitale</th>
+						<th>Continent</th>
+						<th>Population</th>
+						<th>Superficie</th>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="row ifVoisins" style="margin-top: 15px; display:none">
+				<div class="col-10">
+					<h2>Pays voisins de <span id="spanPays"></span></h2>
+				</div>
+				<div class="col-2" style="text-align: right">
+					<button id="btn_retour" class="btn btn-primary"> << Retour</button>
+				</div>
+			</div>
+			<div class="row ifVoisins" style="margin-top: 15px; display:none">
+				<table id="table_voisins" class="table table-striped table-hover table-sm">
+					<thead class="thead-dark">
+						<th>#</th>
+						<th>Nom</th>
+						<th>Capitale</th>
+						<th>Continent</th>
+						<th>Population</th>
+						<th>Superficie</th>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+			
+			
+		</div>
+		<script src='http://code.jquery.com/jquery-3.5.1.min.js'></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="./restCountries.js"></script>
+		
+		<script>
+			$(function() {
+				GUI.init();
+			});
+		</script>
+	</body>
+</html>
+
